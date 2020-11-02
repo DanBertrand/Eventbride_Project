@@ -14,7 +14,7 @@ User.destroy_all
 
 
 
-10.times do
+3.times do
 	user = User.create!(
 		description: Faker::Lorem.paragraphs(rand(2..8)).join('\n'), 
 		first_name: Faker::Name.first_name, 
