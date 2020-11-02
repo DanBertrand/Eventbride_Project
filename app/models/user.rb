@@ -1,13 +1,14 @@
 class User < ApplicationRecord
+	
 	has_many :attendances
 	has_many :events, through: :attendances
 	has_many :events_administrator, foreign_key: "administrator_id", class_name: "Event"
 
 	validates :first_name, 
-		presence: true,
+		presence: true
 
 	validates :last_name, 
-		presence: true,
+		presence: true
 
 	validates :email, 
 		presence: true,
@@ -15,7 +16,7 @@ class User < ApplicationRecord
 		format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
 
 	validates :description, 
-		presence: true,
+		presence: true
 
 	validates :encrypted_password, 
 		presence: true,

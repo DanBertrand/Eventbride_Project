@@ -9,7 +9,7 @@ class Event < ApplicationRecord
 
 
 	validates :start_date, 
-		presence: true, 
+		presence: true 
 
 	validates :duration, 
 		presence: true,

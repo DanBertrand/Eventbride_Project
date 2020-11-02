@@ -19,7 +19,7 @@ User.destroy_all
 		description: Faker::Lorem.paragraphs(rand(2..8)).join('\n'), 
 		first_name: Faker::Name.first_name, 
 		last_name: Faker::Name.last_name,
-		email: Faker::Internet.email, 
+		email: Faker::Name.last_name + "@yopmail.com", 
 		encrypted_password:"password")
 end
 puts "#{tp User.all}"
